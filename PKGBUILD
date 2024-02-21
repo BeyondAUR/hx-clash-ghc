@@ -8,13 +8,14 @@ pkgdesc="Haskell to VHDL/Verilog/SystemVerilog compiler, CAES Language for Synch
 url="https://clash-lang.org/"
 license=("BSD-2-Clause")
 arch=('x86_64')
+options=("strip" ""lto)
 provides=('clash' 'clash-ghc')
 conflicts=('clash' 'clash-ghc')
 replaces=('clash' 'clash-ghc')
 depends=()
 makedepends=('stack')
 source=("${_name}-${pkgver}.tar.gz::https://github.com/clash-lang/${_name}/archive/refs/tags/v${pkgver}.tar.gz")
-sha256sums=('2df4b708480486ade33e29aa4ea99be7bb23198596d96ececc2867c7e50e1ba7')
+sha256sums=('443fa680dcb29dc4900a83561ae91fc121c508392480e0970ec0a276122e64dd')
 
 build() {
   cd "$srcdir/$_name-$pkgver"
